@@ -1,0 +1,9 @@
+Thought process for approaching the problem:
+1. Inspecting the dataset
+2. Cleaning and processing the dataset: looking at the dataset, I realised that it needed to be cleaned of all the distractions such as punctuations, symbols, etc to make it more easy for the model.So we defined a function for it.
+3.In order to filter out articles containing items related to our related topic i.e. Israel/Hamas war, we defined a list of most common keywords concerning our topic and filtered out articles that do not contain these. 
+4. after filtering we cleaning the articles through our cleaning function.
+5. After all these pre=processing we defined a function to generate inputs for our llm model(we used a flan T5 model for this task) in a certain input format.
+6. Finally we created our generate answer function, that would take the question and context as input and generate answer accordingly.
+7. Finally we combined all the article bodies to make the context, and deployed the generate answer function to get our answer to the mentioned question.
+
